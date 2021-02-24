@@ -17,27 +17,22 @@ public class htmlUnitTest {
           
 		// This code will test and print the page title
 		String pageTitle = driver.getTitle();
+		System.out.println("Page title is: " + pageTitle);
 		Assert.assertNotEquals(pageTitle, "");
 		Assert.assertFalse(pageTitle.matches("^\\s*$")); // uses regexp
-		System.out.println("Page title is: " + pageTitle);
 
 		// This code will check the HTML source for Jekyll 404 errors
 		String pageSource = driver.getPageSource();
 		Assert.assertFalse(pageSource.contains("404.html")); 
 		Assert.assertFalse(pageSource.contains("requested page could not be found")); 
 
-		// Create a test that is specific to YOUR Jekyll site here -->
-		
-		if( driver.getTitle().contains(" Jazmin's CIT 496P Experiment "))	
-		{ 
-			System.out.println("The page title has not changed.");
-		}
-		else
-		{
-			System.out.println("Page title has changed.");
-		}
+		// Create a test that is specific to YOUR Jekyll site here --> 
+
+		Assert.assertFalse(pageTitle.contains(" Jazmin's CIT 496P Experiment "));
+		System.out.println("Page title is the same");
+
 		// <-- End of your test code
 
 		driver.quit();			
 	}		
-}
+
