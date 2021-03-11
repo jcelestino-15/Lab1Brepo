@@ -22,7 +22,7 @@ title:
 email: jazmin.celestino.694@my.csun.edu
 description: >- # this means to ignore newlines until "baseurl:"
         Hello, my name is Jazmin Celestino. This part of Lab1 part B.
-baseurl: "/descript" # the subpath of your site, e.g. /blog
+baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "404.html" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jcelestino-15
